@@ -1,0 +1,250 @@
+* {
+box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Sriracha', cursive;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 300px;
+    margin: auto;
+    position: relative;
+    transform: scale(1);
+}
+
+.gradient-circle {
+    background-color: rgb(252, 114, 64);
+    height: 320px;
+    width: 320px;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    z-index: -2;
+    border-radius: 50%;
+}
+
+.circle {
+    background-color: orangered;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.mercury-container {
+    position: absolute;
+    top: -40px;
+    left: 140px;
+    width: 20px;
+    height: 190px;
+    animation: rotate 7s linear forwards infinite;
+    transform-origin: bottom center;
+}
+
+.mercury {
+    background-color: rgb(218, 221, 33);
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    display: block;
+}
+
+.venus-container {
+    position: absolute;
+    top: -70px;
+    left: 140px;
+    width: 20px;
+    height: 220px;
+    animation: rotate 7.4s linear forwards infinite;
+    transform-origin: bottom center;
+}
+
+.venus {
+    background-color: rgb(8, 110, 5); 
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    display: block;
+}
+
+.earth-container {
+    position: absolute;
+    top: -100px;
+    left: 140px;
+    width: 20px;
+    height: 250px;
+    animation: rotate 7.8s linear forwards infinite;
+    transform-origin: bottom center;
+}
+
+.earth {
+    background-color: rgb(1, 64, 116); 
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    display: block;
+}
+
+.mars-container {
+    position: absolute;
+    top: -130px;
+    left: 140px;
+    width: 20px;
+    height: 280px;
+    animation: rotate 8.2s linear forwards infinite;
+    transform-origin: bottom center;
+}
+
+.mars {
+    background-color: rgb(255, 6, 6); 
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    display: block;
+}
+
+.jupiter-container {
+    position: absolute;
+    top: -160px;
+    left: 140px;
+    width: 20px;
+    height: 310px;
+    animation: rotate 8.6s linear forwards infinite;
+    transform-origin: bottom center;
+}
+
+.jupiter {
+    background-color: rgb(255, 255, 255); 
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    display: block;
+}
+
+.saturn-container {
+    position: absolute;
+    top: -190px;
+    left: 140px;
+    width: 20px;
+    height: 340px;
+    animation: rotate 9.2s linear forwards infinite;
+    transform-origin: bottom center;
+}
+
+.saturn {
+    background-color: rgb(247, 117, 219); 
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    display: block;
+}
+
+.uranus-container {
+    position: absolute;
+    top: -220px;
+    left: 140px;
+    width: 20px;
+    height: 370px;
+    animation: rotate 9.6s linear forwards infinite;
+    transform-origin: bottom center;
+}
+
+.uranus {
+    background-color: rgb(117, 210, 247); 
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    display: block;
+}
+
+.naptune-container {
+    position: absolute;
+    top: -250px;
+    left: 140px;
+    width: 20px;
+    height: 400px;
+    animation: rotate 10s linear forwards infinite;
+    transform-origin: bottom center;
+}
+
+.naptune {
+    background-color: rgb(100, 3, 104); 
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    display: block;
+}
+
+.pluto-container {
+    position: absolute;
+    top: -280px;
+    left: 140px;
+    width: 20px;
+    height: 430px;
+    animation: rotate 10.4s linear forwards infinite;
+    transform-origin: bottom center;
+}
+
+.pluto {
+    background-color: rgb(122, 252, 118); 
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    display: block;
+}
+
+.container.grow {
+    animation: grow 3s linear forwards;
+}
+
+.container.shrink {
+    animation: shrink 3s linear forwards;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes grow {
+    from {
+        transform: scale(0.9);
+    }
+
+    to {
+        transform: scale(0.7);
+    }
+}
+
+@keyframes shrink {
+    from {
+        transform: scale(0.7);
+    }
+
+    to {
+        transform: scale(0.9);
+    }
+}
